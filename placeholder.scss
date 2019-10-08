@@ -1,0 +1,57 @@
+.placeholder {
+  display: flex;
+  margin-block-end: 15px;
+
+  &__marker {
+    width: 20px;
+    height: 20px;
+    margin-inline-start: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    // &--clear-all {
+    //   border: 1px solid black;
+    // }
+
+    &--lightsalmon{
+      background: lightsalmon;
+      
+      &--active {
+        background: none;
+        border: 2px solid lightsalmon;
+      }
+    }
+
+    &--lightblue {
+      background: lightblue;
+
+      &--active {
+        background: none;
+        border: 2px solid lightblue;
+      }
+    }
+
+    &--yellowgreen{
+      background: yellowgreen;
+
+      &--active {
+        background: none;
+        border: 2px solid yellowgreen;
+      }
+    }
+
+    &--peachpuff{
+      background: peachpuff;
+
+      &--active {
+        background: none;
+        border: 2px solid peachpuff;
+      }
+    }
+
+  }
+}

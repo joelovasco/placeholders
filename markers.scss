@@ -1,0 +1,83 @@
+$stickies: stickies;
+
+.#{$stickies} {
+  $dimension: 15;
+  display: flex;
+
+  &__dot {
+    transition: margin-inline-start .5s;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: $dimension + px;
+    width: $dimension + px;
+
+    &-container {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      background: white;
+      height: $dimension + px;
+      padding: 2px;
+      border-radius: 3px;
+    }
+
+    &--lightsalmon{
+      background: lightsalmon;
+      
+      &--active {
+        background: none;
+        border: 2px solid lightsalmon;
+      }
+    }
+
+    &--lightblue {
+      background: lightblue;
+
+      &--active {
+        background: none;
+        border: 2px solid lightblue;
+      }
+    }
+
+    &--yellowgreen{
+      background: yellowgreen;
+
+      &--active {
+        background: none;
+        border: 2px solid yellowgreen;
+      }
+    }
+
+    &--peachpuff{
+      background: peachpuff;
+
+      &--active {
+        background: none;
+        border: 2px solid peachpuff;
+      }
+    }
+
+
+    &-container--collapsed > .#{$stickies}__dot {
+      margin-inline-start: -15px;
+
+      &:first-child {
+        margin-inline-start: 0;
+      }
+    }
+
+    &-container--expanded > .#{$stickies}__dot {
+      margin-inline-start: 4px;
+
+      &:first-child {
+        margin-inline-start: 0;
+      }
+    }
+
+    &--unselected {
+      border: 1px solid black;
+      background: white;
+    }
+  }
+
+}
